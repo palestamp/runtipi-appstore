@@ -1,0 +1,17 @@
+{
+  "$schema": "../schema.json",
+  "name": "Babylon",
+  "available": true,
+  "exposable": true,
+  "port": 8921,
+  "id": "babylon",
+  "tipi_version": 1,
+  "version": "0.0.1",
+  "categories": [
+    "utilities"
+  ],
+  "short_desc": "Personal library app",
+  "author": "palestamp",
+  "source": "https://github.com/palestamp/babylon",
+  "form_fields": []
+}

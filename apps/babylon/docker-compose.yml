@@ -1,0 +1,38 @@
+version: "3"
+services:
+  babylon:
+    container_name: babylon
+    image: palestamp/babylon:0.0.1
+    restart: unless-stopped
+    ports:
+      - ${APP_PORT}:80
+    volumes:
+      - ${APP_DATA_DIR}/data:/var/opt/babylon
+    networks:
+      - tipi_main_network
+    labels:
+      # Main
+      traefik.enable: true
+      traefik.http.middlewares.babylon-web-redirect.redirectscheme.scheme: https
+      traefik.http.services.babylon.loadbalancer.server.port: 80
+      # Web
+      traefik.http.routers.babylon-insecure.rule: Host(`${APP_DOMAIN}`)
+      traefik.http.routers.babylon-insecure.entrypoints: web
+      traefik.http.routers.babylon-insecure.service: babylon
+      traefik.http.routers.babylon-insecure.middlewares: babylon-web-redirect
+      # Websecure
+      traefik.http.routers.babylon.rule: Host(`${APP_DOMAIN}`)
+      traefik.http.routers.babylon.entrypoints: websecure
+      traefik.http.routers.babylon.service: babylon
+      traefik.http.routers.babylon.tls.certresolver: myresolver
+      # Local domain
+      traefik.http.routers.babylon-local-insecure.rule: Host(`babylon.${LOCAL_DOMAIN}`)
+      traefik.http.routers.babylon-local-insecure.entrypoints: web
+      traefik.http.routers.babylon-local-insecure.service: babylon
+      traefik.http.routers.babylon-local-insecure.middlewares: babylon-web-redirect
+      # Local domain secure
+      traefik.http.routers.babylon-local.rule: Host(`babylon.${LOCAL_DOMAIN}`)
+      traefik.http.routers.babylon-local.entrypoints: websecure
+      traefik.http.routers.babylon-local.service: babylon
+      traefik.http.routers.babylon-local.tls: true
+      runtipi.managed: true
