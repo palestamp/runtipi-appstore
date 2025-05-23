@@ -13,5 +13,6 @@
   "short_desc": "Personal library app",
   "author": "palestamp",
   "source": "https://github.com/palestamp/babylon",
-  "form_fields": []
+  "form_fields": [],
+  "dynamic_config": true
 }
