@@ -1,1 +1,19 @@
-{ "services": [ { "name": "babylon", "image": "palestamp/babylon:0.0.11", "internalPort": 80, "volumes": [ { "hostPath": "${APP_DATA_DIR}/data", "containerPath": "/var/opt/babylon", "readOnly": false, "shared": false, "private": false } ], "isMain": true } ] }
+{
+    "services": [
+        {
+            "name": "babylon",
+            "image": "palestamp/babylon:0.0.12",
+            "internalPort": 80,
+            "volumes": [
+                {
+                    "hostPath": "${APP_DATA_DIR}/data",
+                    "containerPath": "/var/opt/babylon",
+                    "readOnly": false,
+                    "shared": false,
+                    "private": false
+                }
+            ],
+            "isMain": true
+        }
+    ]
+}
