@@ -6,13 +6,21 @@
   "port": 8921,
   "id": "babylon",
   "tipi_version": 1,
-  "version": "0.0.21",
+  "version": "0.0.22",
   "categories": [
     "utilities"
   ],
   "short_desc": "Personal library app",
   "author": "palestamp",
   "source": "https://github.com/palestamp/babylon",
-  "form_fields": [],
+  "form_fields": [
+    {
+      "env_variable": "OPENAI_API_KEY",
+      "label": "OpenAI API Key",
+      "pattern_error": "Invalid email",
+      "required": true,
+      "type": "password"
+    }
+  ],
   "dynamic_config": true
 }
