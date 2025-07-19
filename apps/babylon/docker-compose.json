@@ -2,7 +2,7 @@
     "services": [
         {
             "name": "babylon",
-            "image": "palestamp/babylon:0.0.23",
+            "image": "palestamp/babylon:0.0.24",
             "internalPort": 80,
             "volumes": [
                 {
@@ -13,7 +13,10 @@
                     "private": false
                 }
             ],
-            "isMain": true
+            "isMain": true,
+            "environment": {
+                "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+            }
         }
     ]
 }
