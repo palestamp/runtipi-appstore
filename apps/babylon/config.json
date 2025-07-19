@@ -17,9 +17,8 @@
     {
       "env_variable": "OPENAI_API_KEY",
       "label": "OpenAI API Key",
-      "pattern_error": "Invalid email",
       "required": true,
-      "type": "password"
+      "type": "text"
     }
   ],
   "dynamic_config": true
