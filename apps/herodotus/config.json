@@ -6,14 +6,13 @@
   "port": 8922,
   "id": "herodotus",
   "tipi_version": 22,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "categories": [
     "utilities"
   ],
   "short_desc": "Personal timeline app",
   "author": "palestamp",
   "source": "https://github.com/palestamp/herodotus",
-  "form_fields": [
-  ],
+  "form_fields": [],
   "dynamic_config": true
 }
