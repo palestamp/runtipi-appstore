@@ -14,8 +14,7 @@
   "author": "palestamp",
   "source": "https://github.com/palestamp/herodotus",
   "form_fields": [
-    {
-    }
+    {}
   ],
   "dynamic_config": true
 }

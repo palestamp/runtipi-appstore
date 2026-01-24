@@ -14,8 +14,7 @@
                 }
             ],
             "isMain": true,
-            "environment": {
-            }
+            "environment": {}
         }
     ]
 }
