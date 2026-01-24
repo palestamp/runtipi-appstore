@@ -2,7 +2,7 @@
     "services": [
         {
             "name": "herodotus",
-            "image": "palestamp/herodotus:0.0.2",
+            "image": "palestamp/herodotus:0.0.3",
             "internalPort": 80,
             "volumes": [
                 {
