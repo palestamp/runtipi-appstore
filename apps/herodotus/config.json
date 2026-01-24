@@ -1,11 +1,11 @@
 {
-  "$schema": "../schema.json",
+  "$schema": "../app-info-schema.json",
   "name": "Herodotus",
   "available": true,
   "exposable": true,
-  "port": 8921,
+  "port": 8922,
   "id": "herodotus",
-  "tipi_version": 1,
+  "tipi_version": 22,
   "version": "0.0.1",
   "categories": [
     "utilities"
@@ -14,8 +14,6 @@
   "author": "palestamp",
   "source": "https://github.com/palestamp/herodotus",
   "form_fields": [
-    {
-    }
   ],
   "dynamic_config": true
 }
