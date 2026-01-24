@@ -1,0 +1,21 @@
+{
+  "$schema": "../schema.json",
+  "name": "Herodotus",
+  "available": true,
+  "exposable": true,
+  "port": 8921,
+  "id": "herodotus",
+  "tipi_version": 1,
+  "version": "0.0.1",
+  "categories": [
+    "utilities"
+  ],
+  "short_desc": "Personal timeline app",
+  "author": "palestamp",
+  "source": "https://github.com/palestamp/herodotus",
+  "form_fields": [
+    {
+    }
+  ],
+  "dynamic_config": true
+}
