@@ -5,8 +5,8 @@
   "exposable": true,
   "port": 8921,
   "id": "babylon",
-  "tipi_version": 1,
-  "version": "0.0.67",
+  "tipi_version": 2,
+  "version": "0.0.70",
   "categories": [
     "utilities"
   ],
@@ -19,6 +19,12 @@
       "label": "OpenAI API Key",
       "required": true,
       "type": "text"
+    },
+    {
+      "type": "random",
+      "label": "Django secret key",
+      "min": 64,
+      "env_variable": "BABYLON_SECRET_KEY"
     }
   ],
   "dynamic_config": true

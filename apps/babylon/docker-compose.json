@@ -2,8 +2,8 @@
     "services": [
         {
             "name": "babylon",
-            "image": "palestamp/babylon:0.0.67",
-            "internalPort": 80,
+            "image": "palestamp/babylon:0.0.70",
+            "internalPort": 8000,
             "volumes": [
                 {
                     "hostPath": "${APP_DATA_DIR}/data",
@@ -15,7 +15,15 @@
             ],
             "isMain": true,
             "environment": {
-                "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+                "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+                "DJANGO_SECRET_KEY": "${BABYLON_SECRET_KEY}",
+                "DJANGO_ALLOWED_HOSTS": "*",
+                "DJANGO_CSRF_TRUSTED_ORIGINS": "${APP_PROTOCOL:-http}://${APP_DOMAIN}",
+                "DJANGO_BEHIND_PROXY": "1",
+                "DJANGO_SECURE_SSL_REDIRECT": "0",
+                "DJANGO_SESSION_COOKIE_SECURE": "0",
+                "DJANGO_CSRF_COOKIE_SECURE": "0",
+                "DJANGO_SECURE_HSTS_SECONDS": "0"
             }
         }
     ]
