@@ -2,7 +2,7 @@
     "services": [
         {
             "name": "babylon",
-            "image": "palestamp/babylon:0.0.77",
+            "image": "palestamp/babylon:0.1.0",
             "internalPort": 8000,
             "volumes": [
                 {
