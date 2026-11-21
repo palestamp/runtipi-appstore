@@ -2,7 +2,7 @@
     "services": [
         {
             "name": "babylon",
-            "image": "palestamp/babylon:0.2.0",
+            "image": "palestamp/babylon:0.3.0",
             "internalPort": 8000,
             "volumes": [
                 {
@@ -16,6 +16,7 @@
             "isMain": true,
             "environment": {
                 "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+                "READING_BUDGET_START": "${READING_BUDGET_START}",
                 "DJANGO_SECRET_KEY": "${BABYLON_SECRET_KEY}",
                 "DJANGO_ALLOWED_HOSTS": "*",
                 "DJANGO_CSRF_TRUSTED_ORIGINS": "${APP_PROTOCOL:-http}://${APP_DOMAIN}",
