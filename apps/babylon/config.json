@@ -25,6 +25,12 @@
       "label": "Django secret key",
       "min": 64,
       "env_variable": "BABYLON_SECRET_KEY"
+    },
+    {
+      "env_variable": "READING_BUDGET_START",
+      "label": "Reading budget start date (YYYY-MM-DD, empty to turn off)",
+      "required": false,
+      "type": "text"
     }
   ],
   "dynamic_config": true
